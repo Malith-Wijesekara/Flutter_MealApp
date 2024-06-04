@@ -11,13 +11,13 @@ class CategoriesScreen extends StatelessWidget {
   final List<Meal> availableMeals;
 
   void _selectedCategory(BuildContext context, Category category) {
-    print(availableMeals);
+    print(availableMeals.length);
     final filteredMeals = availableMeals
         .where(
           (meal) => meal.categories.contains(category.id),
         )
         .toList();
-    final meal = filteredMeals[0].title;
+    // final meal = filteredMeals[0].title;
 
     Navigator.of(context).push(
       MaterialPageRoute(
